@@ -15,6 +15,7 @@ import { FloatingCartBar } from './components/FloatingCartBar';
 import { CheckoutDrawer } from './components/CheckoutDrawer';
 import { FlyersPopupModal } from './components/FlyersPopupModal';
 import { AdminModal } from './components/AdminModal';
+import { QRCodeModal } from './components/QRCodeModal';
 import { NotificationToast } from './components/NotificationToast';
 import { INITIAL_PRODUCTS, INITIAL_ORDERS, BUSINESS_INFO, LunchSpecialOption } from './data/menuData';
 import { Product, ProductCategory, ProductVariant, SelectedCustomization, CartItem, Order, OrderStatus, PaymentStatus, AppNotification } from './types';
@@ -196,6 +197,7 @@ export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isFlyersPopupOpen, setIsFlyersPopupOpen] = useState(false);
   const [isAdminOpen, setIsAdminOpen] = useState(false);
+  const [isQRCodeOpen, setIsQRCodeOpen] = useState(false);
 
   // Order Lunch Special (Almuerzo Saludable de los Flyers)
   const handleOrderLunchSpecial = (lunch: LunchSpecialOption) => {
@@ -525,6 +527,7 @@ export default function App() {
           <SplashScreen
             onEnterCatalog={handleEnterCatalog}
             onOpenMenuBoard={() => setIsFlyersPopupOpen(true)}
+            onOpenQR={() => setIsQRCodeOpen(true)}
           />
         </div>
       )}
@@ -537,6 +540,7 @@ export default function App() {
             onReturnToSplash={() => setView('splash')}
             onOpenCart={() => setIsCartOpen(true)}
             onOpenAdmin={() => setIsAdminOpen(true)}
+            onOpenQR={() => setIsQRCodeOpen(true)}
             cartCount={totalCartCount}
             isDark={isDark}
             onToggleDark={toggleDarkMode}
@@ -663,6 +667,14 @@ export default function App() {
           setIsAdminOpen(false);
         }}
         onResetData={handleResetData}
+        onOpenQR={() => setIsQRCodeOpen(true)}
+      />
+
+      {/* Interactive QR Code Digital Menu Modal */}
+      <QRCodeModal
+        isOpen={isQRCodeOpen}
+        onClose={() => setIsQRCodeOpen(false)}
+        defaultUrl="https://tentacionesfit.vercel.app/"
       />
     </div>
   );

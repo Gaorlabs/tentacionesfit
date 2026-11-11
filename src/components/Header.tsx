@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Moon, Sun, ShoppingBag, Shield } from 'lucide-react';
+import { Home, Moon, Sun, ShoppingBag, Shield, QrCode } from 'lucide-react';
 import { BUSINESS_INFO } from '../data/menuData';
 import { PWAInstallButton } from './PWAInstallButton';
 
@@ -7,6 +7,7 @@ interface HeaderProps {
   onReturnToSplash: () => void;
   onOpenCart: () => void;
   onOpenAdmin: () => void;
+  onOpenQR?: () => void;
   cartCount: number;
   isDark: boolean;
   onToggleDark: () => void;
@@ -16,6 +17,7 @@ export const Header: React.FC<HeaderProps> = ({
   onReturnToSplash,
   onOpenCart,
   onOpenAdmin,
+  onOpenQR,
   cartCount,
   isDark,
   onToggleDark,
@@ -51,10 +53,22 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
         </div>
 
-        {/* Right Controls: Install PWA, Dark mode, Admin, Cart */}
+        {/* Right Controls: Install PWA, QR, Dark mode, Admin, Cart */}
         <div className="flex items-center gap-1.5 shrink-0">
           {/* PWA In-App Install Button */}
           <PWAInstallButton variant="header" />
+
+          {/* QR Code Digital Menu Button */}
+          {onOpenQR && (
+            <button
+              onClick={onOpenQR}
+              title="Carta Digital QR"
+              aria-label="Carta Digital QR"
+              className="flex items-center justify-center w-8 h-8 rounded-full text-emerald-700 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/60 transition-colors"
+            >
+              <QrCode className="w-4 h-4" />
+            </button>
+          )}
 
           {/* Theme Switcher */}
           <button

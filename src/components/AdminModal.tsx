@@ -32,6 +32,7 @@ import {
   Trash2,
   Save,
   Image as ImageIcon,
+  QrCode,
 } from 'lucide-react';
 import { Product, Order, OrderStatus, PaymentStatus, ProductCategory } from '../types';
 import { CATEGORIES_LIST } from '../data/menuData';
@@ -49,6 +50,7 @@ interface AdminModalProps {
   onRefreshOrders?: () => Promise<void>;
   onSendPushNotification: (title: string, message: string) => void;
   onResetData: () => void;
+  onOpenQR?: () => void;
 }
 
 // Preset healthy product image URLs
@@ -76,6 +78,7 @@ export const AdminModal: React.FC<AdminModalProps> = ({
   onRefreshOrders,
   onSendPushNotification,
   onResetData,
+  onOpenQR,
 }) => {
   const [activeTab, setActiveTab] = useState<'orders' | 'inventory' | 'stats' | 'push'>('orders');
 
@@ -342,6 +345,18 @@ export const AdminModal: React.FC<AdminModalProps> = ({
               <Download className="w-3.5 h-3.5" />
               <span>Exportar</span>
             </button>
+
+            {/* QR Generator */}
+            {onOpenQR && (
+              <button
+                onClick={onOpenQR}
+                title="Generar QR de Mesa / Carta"
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 text-xs font-bold transition-colors border border-emerald-200 dark:border-emerald-800"
+              >
+                <QrCode className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">QR Carta</span>
+              </button>
+            )}
 
             {/* Close button */}
             <button

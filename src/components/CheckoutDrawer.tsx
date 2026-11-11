@@ -494,7 +494,7 @@ export const CheckoutDrawer: React.FC<CheckoutDrawerProps> = ({
                       setCustomer({ ...customer, phone: e.target.value });
                       if (formErrors.phone) setFormErrors({ ...formErrors, phone: undefined });
                     }}
-                    placeholder="Ej. 970 380 415"
+                    placeholder="Ej. 991 494 099"
                     className={`w-full text-xs p-2.5 rounded-xl border bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 focus:outline-emerald-600 ${
                       formErrors.phone ? 'border-red-500' : 'border-neutral-200 dark:border-neutral-700'
                     }`}
