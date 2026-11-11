@@ -47,6 +47,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           referrerPolicy="no-referrer"
           loading="lazy"
+          onError={(e) => {
+            const target = e.currentTarget;
+            if (!target.src.endsWith('/images/postre_fit_selva_negra_1794251504712.jpg')) {
+              target.src = '/images/postre_fit_selva_negra_1794251504712.jpg';
+            }
+          }}
         />
 
         {/* Gradient Scrim for Contrast */}

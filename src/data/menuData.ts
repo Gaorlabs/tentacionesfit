@@ -14,9 +14,9 @@ export const BUSINESS_INFO = {
   bcpAccount: '194-98234150-0-82',
   bcpCci: '002-194-0098234150082-91',
   bcpHolder: 'TENTACIONES FIT S.A.C.',
-  logoUrl: '/public/assets/aistudio/Captura_de_Pantalla_2026-11-09_a_la_s__13.55.34_83aa5897.png',
-  menuBoardUrl: '/public/assets/aistudio/WhatsApp_Image_2026-11-09_at_2.01.10_PM_8f4bfc51.jpeg',
-  lunchFlyerUrl: '/public/assets/aistudio/WhatsApp_Image_2026-11-09_at_2.01.54_PM_4a4b9f7f.jpeg',
+  logoUrl: '/assets/aistudio/Captura_de_Pantalla_2026-11-09_a_la_s__13.55.34_83aa5897.png',
+  menuBoardUrl: '/assets/aistudio/WhatsApp_Image_2026-11-09_at_2.01.10_PM_8f4bfc51.jpeg',
+  lunchFlyerUrl: '/assets/aistudio/WhatsApp_Image_2026-11-09_at_2.01.54_PM_4a4b9f7f.jpeg',
 };
 
 export interface LunchSpecialOption {
@@ -41,7 +41,7 @@ export const LUNCH_SPECIAL_OPTIONS: LunchSpecialOption[] = [
     mainDish: 'Garbanzos con pollo guisado',
     includes: ['Mazamorra light', 'Ensalada de verdura', 'Refresco natural'],
     description: 'Garbanzos tiernos cocidos con pollo guisado sazonado saludablemente. Incluye mazamorra light, ensalada de verdura fresca y refresco.',
-    image: '/public/assets/aistudio/WhatsApp_Image_2026-11-09_at_2.01.54_PM_4a4b9f7f.jpeg',
+    image: '/assets/aistudio/WhatsApp_Image_2026-11-09_at_2.01.54_PM_4a4b9f7f.jpeg',
   },
   {
     id: 'alm-opcion-2',
@@ -52,7 +52,7 @@ export const LUNCH_SPECIAL_OPTIONS: LunchSpecialOption[] = [
     mainDish: 'Filete de pollo con camote',
     includes: ['Mazamorra light', 'Ensalada de verdura', 'Refresco natural'],
     description: 'Filete de pechuga de pollo a la plancha dorado con finas hierbas y camote al vapor. Incluye mazamorra light, ensalada de verdura fresca y refresco.',
-    image: '/public/assets/aistudio/WhatsApp_Image_2026-11-09_at_2.01.54_PM_4a4b9f7f.jpeg',
+    image: '/assets/aistudio/WhatsApp_Image_2026-11-09_at_2.01.54_PM_4a4b9f7f.jpeg',
   },
 ];
 
