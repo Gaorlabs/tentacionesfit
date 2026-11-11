@@ -1,0 +1,59 @@
+[
+  {
+    "id": "ord-demo-1",
+    "orderNumber": "TF-9042",
+    "date": "Hoy, 12:45 PM",
+    "items": [
+      {
+        "cartItemId": "item-demo-1",
+        "productId": "bat-power",
+        "name": "Batido Power",
+        "basePrice": 14,
+        "unitPrice": 14,
+        "selectedCustomizations": [],
+        "quantity": 1,
+        "image": "/src/assets/images/batido_power_proteina_1794251541727.jpg"
+      },
+      {
+        "cartItemId": "item-demo-2",
+        "productId": "pos-1",
+        "name": "Selva Negra",
+        "basePrice": 18,
+        "unitPrice": 18,
+        "selectedCustomizations": [],
+        "quantity": 1,
+        "image": "/src/assets/images/postre_fit_selva_negra_1794251504712.jpg"
+      }
+    ],
+    "subtotal": 32,
+    "deliveryFee": 0,
+    "tip": 2,
+    "discount": 0,
+    "total": 34,
+    "customer": {
+      "name": "Carlos Mendoza",
+      "phone": "987 654 321",
+      "address": "Calle Las Begonias 450, Dpto 602, San Isidro",
+      "reference": "Frente al centro financiero"
+    },
+    "paymentMethod": "yape",
+    "status": "en_camino",
+    "statusHistory": [
+      {
+        "status": "recibido",
+        "timestamp": "12:45 PM"
+      },
+      {
+        "status": "preparando",
+        "timestamp": "12:55 PM"
+      },
+      {
+        "status": "en_camino",
+        "timestamp": "01:15 PM"
+      }
+    ],
+    "whatsappMessage": "Hola Tentaciones Fit! Deseo consultar mi pedido #TF-9042",
+    "createdAt": 1731268000000,
+    "paymentStatus": "pagado"
+  }
+]

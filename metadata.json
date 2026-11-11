@@ -1,0 +1,6 @@
+{
+  "name": "Tentaciones Fit - Catálogo y Delivery",
+  "description": "Web app móvil de catálogo saludable y pedidos directos por WhatsApp estilo Rappi/PedidosYa para Tentaciones Fit.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

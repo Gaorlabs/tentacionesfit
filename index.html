@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    
+    <!-- Page Title & SEO -->
+    <title>Tentaciones Fit – Catálogo y Delivery Saludable en Lima</title>
+    <meta
+      name="description"
+      content="Pide postres fit sin azúcar, batidos con 24g de proteína, ensaladas frescas y cremoladas con delivery directo por WhatsApp en Lima con Tentaciones Fit."
+    />
+    <meta name="keywords" content="postres fit, delivery saludable Lima, comida saludable, batidos con proteína, postres sin azúcar, ensaladas Lima, Tentaciones Fit, delivery WhatsApp" />
+    <meta name="author" content="Tentaciones Fit" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- OpenGraph Social Cards -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tentaciones Fit" />
+    <meta property="og:title" content="Tentaciones Fit – Catálogo y Delivery Saludable" />
+    <meta
+      property="og:description"
+      content="Postres sin azúcar, batidos con 24g de proteína, frappes y ensaladas frescas con pedidos directos a WhatsApp."
+    />
+    <meta property="og:image" content="/pwa-512x512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Tentaciones Fit - Catálogo Saludable" />
+    <meta property="og:locale" content="es_PE" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tentaciones Fit – Catálogo y Delivery Saludable" />
+    <meta
+      name="twitter:description"
+      content="Postres sin azúcar, batidos con 24g de proteína y ensaladas con delivery directo a WhatsApp."
+    />
+    <meta name="twitter:image" content="/pwa-512x512.png" />
+
+    <!-- Theme Colors & PWA Capabilities -->
+    <meta name="theme-color" content="#059669" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Tentaciones" />
+
+    <!-- Apple iOS Safari Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Tentaciones" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Icons & Manifest -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org Structured Data (JSON-LD) for Rich Search Snippets -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Tentaciones Fit",
+        "image": "/pwa-512x512.png",
+        "description": "Catálogo interactivo de postres fit sin azúcar, batidos con 24g de proteína, almuerzos saludables y ensaladas con delivery directo por WhatsApp.",
+        "servesCuisine": ["Saludable", "Fitness", "Repostería sin azúcar", "Bebidas Proteicas"],
+        "priceRange": "S/ 5.00 - S/ 25.00",
+        "telephone": "+51970380415",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "San Isidro",
+          "addressRegion": "Lima",
+          "addressCountry": "PE"
+        },
+        "paymentAccepted": "Yape, BCP, Efectivo",
+        "currenciesAccepted": "PEN",
+        "hasMenu": {
+          "@type": "Menu",
+          "name": "Carta Saludable Tentaciones Fit",
+          "hasMenuSection": [
+            {
+              "@type": "MenuSection",
+              "name": "Postres Fit Sin Azúcar",
+              "description": "Selva Negra, 3 Leches de Avena, Cheesecake Frutal, Choco Lúcuma endulzados con estevia."
+            },
+            {
+              "@type": "MenuSection",
+              "name": "Batidos con 24g de Proteína",
+              "description": "Batido Power, Batido de Berries, Batido Zero Carbo, Batido de Lúcuma sin lactosa."
+            },
+            {
+              "@type": "MenuSection",
+              "name": "Ensaladas Frescas & Cremoladas",
+              "description": "Ensalada de verdura fitness con filete de pollo y palta, cremoladas de fruta natural."
+            }
+          ]
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-neutral-100 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 antialiased selection:bg-emerald-500/20 selection:text-emerald-700">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then((registration) => {
+            console.log('[PWA] Service Worker registrado con éxito:', registration.scope);
+          }).catch((error) => {
+            console.warn('[PWA] Error registrando Service Worker:', error);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
