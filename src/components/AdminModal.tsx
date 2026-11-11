@@ -53,14 +53,14 @@ interface AdminModalProps {
 
 // Preset healthy product image URLs
 const IMAGE_PRESETS = [
-  { name: 'Selva Negra Fit', url: '/src/assets/images/postre_fit_selva_negra_1794251504712.jpg' },
-  { name: 'Tres Leches Proteico', url: '/src/assets/images/postre_fit_tres_leches_1794251518596.jpg' },
-  { name: 'Cheesecake Fit', url: '/src/assets/images/postre_fit_cheesecake_1794251535496.jpg' },
-  { name: 'Batido Proteico Power', url: '/src/assets/images/batido_proteico_power_1794251554625.jpg' },
-  { name: 'Jugo Natural Detox', url: '/src/assets/images/jugo_natural_detox_1794251571477.jpg' },
-  { name: 'Ensalada Verde Proteica', url: '/src/assets/images/ensalada_verde_proteica_1794251586716.jpg' },
-  { name: 'Frappe Proteico Mocha', url: '/src/assets/images/frappe_proteico_mocha_1794251603517.jpg' },
-  { name: 'Cremolada Natural Maracuyá', url: '/src/assets/images/cremolada_natural_maracuya_1794251621217.jpg' },
+  { name: 'Selva Negra Fit', url: '/images/postre_fit_selva_negra_1794251504712.jpg' },
+  { name: 'Tres Leches Proteico', url: '/images/postre_fit_tres_leches_1794251518596.jpg' },
+  { name: 'Cheesecake Fit', url: '/images/postre_fit_cheesecake_1794251535496.jpg' },
+  { name: 'Batido Proteico Power', url: '/images/batido_proteico_power_1794251554625.jpg' },
+  { name: 'Jugo Natural Detox', url: '/images/jugo_natural_detox_1794251571477.jpg' },
+  { name: 'Ensalada Verde Proteica', url: '/images/ensalada_verde_proteica_1794251586716.jpg' },
+  { name: 'Frappe Proteico Mocha', url: '/images/frappe_proteico_mocha_1794251603517.jpg' },
+  { name: 'Cremolada Natural Maracuyá', url: '/images/cremolada_natural_maracuya_1794251621217.jpg' },
 ];
 
 export const AdminModal: React.FC<AdminModalProps> = ({

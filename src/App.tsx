@@ -51,17 +51,21 @@ export default function App() {
 
   // Products state (persisted in localStorage for Admin inventory edits, strictly from official carta)
   const [products, setProducts] = useState<Product[]>(() => {
-    // Purge old cache with previous lunches or flyer placeholders
+    // Purge old cache with previous /src/assets/images paths
     localStorage.removeItem('tentaciones_products');
     localStorage.removeItem('tentaciones_products_v2');
     localStorage.removeItem('tentaciones_products_carta_v3');
+    localStorage.removeItem('tentaciones_products_carta_v4');
 
-    const saved = localStorage.getItem('tentaciones_products_carta_v4');
+    const saved = localStorage.getItem('tentaciones_products_carta_v5');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
+          return parsed.map((p: Product) => ({
+            ...p,
+            image: p.image.replace('/src/assets/images/', '/images/'),
+          }));
         }
       } catch {
         // fallback
@@ -71,7 +75,7 @@ export default function App() {
   });
 
   useEffect(() => {
-    localStorage.setItem('tentaciones_products_carta_v4', JSON.stringify(products));
+    localStorage.setItem('tentaciones_products_carta_v5', JSON.stringify(products));
   }, [products]);
 
   // Orders state
